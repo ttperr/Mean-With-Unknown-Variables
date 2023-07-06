@@ -9,7 +9,7 @@ public class Main {
             // Asking for the number of variables until the user enters a valid number and if the user click on cancel then exit
             int n = 0;
             while (n <= 0) {
-                String nString = JOptionPane.showInputDialog("How many variables (marks) are there?");
+                String nString = JOptionPane.showInputDialog("How many variables (marks) you know?");
                 if (nString == null) {
                     System.exit(0);
                 }
@@ -41,7 +41,7 @@ public class Main {
             // Asking for the sum of the coefficients of the unknown variables until the user enters a valid double number and if the user click on cancel then exit
             double missingCoeffSum = 0;
             while (missingCoeffSum <= 0) {
-                String missingCoefSumString = JOptionPane.showInputDialog("What is the sum of the coefficients of the unknown variables?");
+                String missingCoefSumString = JOptionPane.showInputDialog("What is the sum of the coefficients of the unknown variables (marks)?");
                 if (missingCoefSumString == null) {
                     System.exit(0);
                 }
@@ -65,10 +65,10 @@ public class Main {
             unknownMean = Math.round(unknownMean * 100.0) / 100.0;
 
             // Showing the unknown variables mean
-            JOptionPane.showMessageDialog(null, "The unknown variables mean is " + unknownMean);
+            JOptionPane.showMessageDialog(null, "The unknown variables (marks) mean is " + unknownMean);
 
             // Asking if the user wants to calculate another unknown variables mean
-            int answer = JOptionPane.showConfirmDialog(null, "Do you want to calculate another unknown variables mean?", "Yes or No", JOptionPane.YES_NO_OPTION);
+            int answer = JOptionPane.showConfirmDialog(null, "Do you want to calculate another unknown variables (marks) mean?", "Yes or No", JOptionPane.YES_NO_OPTION);
             if (answer == JOptionPane.YES_OPTION) {
                 frame.setVisible(false);
                 main(args);
